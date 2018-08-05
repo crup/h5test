@@ -85,6 +85,7 @@ searchForm.addEventListener('submit', function(e) {
 		searchResult.classList.toggle('fadeIn');
 	})
 	.then(function() {
+		searchButton.innerText = 'Search';
 		showArtistDialog.close();
 	})
 	.catch(function(err) {

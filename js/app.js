@@ -75,6 +75,7 @@ searchForm.addEventListener('submit', function (e) {
 		searchContainer.classList.toggle('fadeOut');
 		searchResult.classList.toggle('fadeIn');
 	}).then(function () {
+		searchButton.innerText = 'Search';
 		showArtistDialog.close();
 	}).catch(function (err) {
 		alert('API Error: ' + err);
