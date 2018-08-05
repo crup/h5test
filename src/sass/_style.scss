@@ -202,3 +202,9 @@ p.error-message {
     margin-top: 55px;
 		animation: slide-up 0.4s ease-out;
 }
+
+@media only screen and (max-width: 600px) {
+    .search h1:before {
+			display: none;
+		}
+}
