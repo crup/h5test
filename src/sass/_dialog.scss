@@ -1,0 +1,64 @@
+dialog {
+  padding: 30px 35px;
+  border: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em black;
+}
+
+dialog::backdrop {
+  background-color: #333;
+}
+dialog + .backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+}
+dialog[open] {
+  animation: slide-up 0.4s ease-out;
+}
+
+dialog {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  max-width: 80vw;
+  background-color: white;
+  padding: 30px 35px
+}
+dialog[open] {
+  display: block;
+}
+
+.modal-header {
+  position: relative;
+}
+
+dialog#search-artist-dialog{
+  width: 585px;
+  max-height: 345px;
+}
+
+dialog .close-dialog{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #cdcdcd;
+  font-size: 2.2em;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

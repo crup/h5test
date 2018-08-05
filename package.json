@@ -1,0 +1,39 @@
+{
+  "name": "h5test",
+  "version": "1.0.0",
+  "description": "HTML5 assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel live-server sass:watch babel:watch copy-polyfills",
+    "sass:compile": "./node_modules/.bin/sass src/sass/main.scss css/app.css",
+    "sass:build": "./node_modules/.bin/sass src/sass/main.scss css/app.css --style=compressed --no-source-map",
+    "sass:watch": "./node_modules/.bin/sass src/sass/main.scss css/app.css --watch",
+    "live-server": "./node_modules/.bin/live-server",
+    "babel:build": "./node_modules/.bin/babel src/js -d js",
+    "babel:watch": "./node_modules/.bin/babel src/js -d js --watch",
+    "build:dist": "npm-run-all sass:build babel:build copy-polyfills",
+    "copy-polyfills": "cp ./node_modules/dialog-polyfill/dialog-polyfill.js js/dialog-polyfill.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crup/h5test.git"
+  },
+  "author": "Rajender Joshi <mail@2km.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crup/h5test/issues"
+  },
+  "homepage": "https://github.com/crup/h5test#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.1.3",
+    "sass": "^1.10.2"
+  },
+  "dependencies": {
+    "dialog-polyfill": "^0.4.10",
+    "pills": "^1.0.1",
+    "reset-css": "^4.0.1"
+  }
+}

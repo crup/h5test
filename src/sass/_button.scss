@@ -1,0 +1,26 @@
+button.search-button {
+  @include gradient($lightGreen, $darkGreen);
+	font-family: $primaryFont;
+	color: $white;
+	border: none;
+	border-radius: 7px;
+	border-bottom: 3px solid #005A5A;
+}
+
+button.search-button.large {
+  padding: 20px 60px 16px 60px;
+	font-size: 2.4em;
+}
+
+button.search-button.small {
+  padding: 17px 54px 13px 54px;
+  font-size: 2em;
+}
+
+button.search-button:hover {
+  opacity: 0.85;
+}
+
+.search button:active {
+  opacity: 1;
+}

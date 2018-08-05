@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The HTML5 Challenge</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="css/app.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="search" class="search-container twelve">
+	<div class="search">
+		<h1>Find your artist below</h1>
+		<button class="search-button large" id="search-artist">Search Artist</button>
+	</div>
+</div>
+<div id="result" class="result-body fadeOut">
+	<div class="result row">
+		<div class="result-header column twelve">
+			<h2>Search results for &#8220;<span id="search-term"></span>&#8221;.</h2>
+			<a href="#" id="clear-result" class="clear-result">Clear</a>
+		</div>
+	</div>
+	<div id="albums"></div>
+</div>
+
+<dialog id="search-artist-dialog">
+  <form>
+		<div class="modal-header row">
+			<h2 class="column twelve no-padding">Enter Search Criteria</h2>
+		</div>
+		<div class="modal-body">
+			<div class="form-group row">
+				<label class="column three no-padding">Artist Name</label>
+				<input class="column nine track-input" type="text" name="term" pattern="[jack]{4}" autocomplete="off" required>
+				<p class="offset by-three error-message"></p>
+			</div>
+			<div class="form-group row">
+				<label class="column three no-padding">No. of tracks</label>
+				<input class="column nine track-input" type="number" name="limit" min="1" max="4" value="1" required>
+				<p class="offset by-three error-message"></p>
+			</div>
+			<div class="form-group row">
+				<button class="search-button small offset by-three" type="submit">Search</button>
+			</div>
+		</div>
+  </form>
+	<button class="close-dialog" id="cancel">x</button>
+</dialog>
+<script src="js/dialog-polyfill.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>

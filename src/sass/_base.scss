@@ -1,0 +1,20 @@
+$primaryFont: 'Gotham Rounded', sans-serif;
+$gray: #333;
+$white: #fff;
+$lightGreen: #00b4a5;
+$test: #039e91;
+$darkGreen: #00989d;
+
+@mixin gradient($fromColor, $toColor) {
+  background: -moz-linear-gradient(270deg, $fromColor 0%, $fromColor 15%, $toColor 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $fromColor), color-stop(15%, $fromColor), color-stop(100%, $toColor)); /* safari4+,chrome */
+	background: -webkit-linear-gradient(270deg, $fromColor 0%, $fromColor 15%, $toColor 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(270deg, $fromColor 0%, $fromColor 15%, $toColor 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(270deg, $fromColor 0%, $fromColor 15%, $toColor 100%); /* ie10+ */
+	background: linear-gradient(180deg, $fromColor 0%, $fromColor 15%, $toColor 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor', endColorstr='$toColor',GradientType=0 ); /* ie6-9 */
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
